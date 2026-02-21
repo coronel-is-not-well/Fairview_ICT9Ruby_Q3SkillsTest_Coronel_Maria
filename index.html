@@ -8,13 +8,44 @@
 
     <style>
      
-    body{background-color: rgb(242, 245, 248);}
+    body{background-color: rgb(242, 245, 248);
+         background-image: url('https://i.pinimg.com/1200x/76/f4/96/76f496dfbba98c9188e143ec7ec733ee.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;}
 
     #boody{background-color: white;
+        border: ridge rgb(233, 160, 51);
             padding: 30px;
             margin: 50px;}
 
     #pfp{border-radius: 50%;}
+
+    #rowo{text-align: center;
+        padding-top: 50px;}
+
+    #myFile{margin-left: 90px;}
+
+    #navb{border-bottom: double rgb(233, 160, 51);
+            }
+
+    button{background-color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(233, 160, 51);
+            border-top: 1px solid rgb(233, 160, 51);
+            border-left: double rgb(233, 160, 51);
+            border-right: double rgb(233, 160, 51);
+            color: rgb(27, 29, 134);
+            }
+
+    #reset{background-color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(233, 160, 51);
+            border-top: 1px solid rgb(233, 160, 51);
+            border-left: double rgb(233, 160, 51);
+            border-right: double rgb(233, 160, 51);
+            color: rgb(27, 29, 134);
+            }
+
+    label{color: rgb(27, 29, 134);}
+
 
     </style>   
    
@@ -23,10 +54,10 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" id="navb">
 
 <div class="container-fluid">
-  <a class="navbar-brand" href=""><img src="https://i.pinimg.com/1200x/0d/20/42/0d20428b64045f852ad69cd01d7e4ff5.jpg" alt="logo" class="" style="height: 75px; width: 75px;"></a>
+  <a class="navbar-brand" href=""><img src="https://i.pinimg.com/1200x/0d/20/42/0d20428b64045f852ad69cd01d7e4ff5.jpg" alt="logo" class="" style="height: 65px; width: 65px;"></a>
     
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
@@ -70,25 +101,80 @@
 
 <div class="row" id="boody">
 
-    <div class="col-lg">
+    <div class="col-lg" id="rowo">
     
-       <img src="https://i.pinimg.com/736x/ed/c6/bf/edc6bf9626f5552f2ae1111f09d02b7b.jpg" alt="pfp" style="width:200px; height:200px;" id="pfp">
+       <img src="https://i.pinimg.com/736x/ed/c6/bf/edc6bf9626f5552f2ae1111f09d02b7b.jpg" alt="pfp" style="width:200px; height:200px; border: double rgb(233, 160, 51);" id="pfp">
        <br>
        <br>
-       <input type="file" id="myFile" name="filename">
+       <input type="file" id="myFile" name="filename" >
        <br>
-       <button type="button">Submit Photo</button>
+       <button type="button" style="width: 36%;">Submit Photo</button>
 
     </div>
 
     <div class="col-lg">
 
-        <h1>Registration</h1>
+        <h1 style="color: rgb(27, 29, 134);">Registration</h1>
+        <br>
+
+        <details class="ontoggle">
+            <summary style="color: rgb(27, 29, 134);">Instructions</summary>
+            <p id="instruct" style="color: rgb(27, 29, 134);">Fill out the form to register and you can be able to book a carraige ride!</p>
+        </details>
+        <br>
+        
+        <form action="#">
+
+        <label for="name">Full name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name..." style="width: 100%;"><br><br>
+
+        <div class="row">
+        
+            <div class="col-lg">
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" placeholder="Enter your age..." style="width: 100%;"> 
+
+            </div>
+
+            <div class="col-lg">
+
+            <label for="pn">Phone Number:</label><br>
+            <input type="pn" id="pn" name="pn" placeholder="Enter your phone number..." style="width: 100%;">
+
+            </div>
+        
+        </div>
+
+        <br>
+
+        <label for="em">Email:</label><br>
+        <input type="email" id="em" name="em" placeholder="Enter your email..." style="width: 100%;"><br><br>
+
+        <label for="user">Username:</label><br>
+        <input type="text" id="user" name="user" placeholder="Enter your username..." style="width: 100%;"><br><br>
+
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass" placeholder="Enter your password..." style="width: 100%;"><br><br>
+
+        <input type="checkbox" id="terms" name="terms" value="terms">
+		<label for="terms">I accept the Terms of Use and Privacy Policy</label>
+		<br><br>
+
+        <button type="submit" id="submit" name="submit" style="width: 100%;">Register</button><br>
+        <input type="reset" name="reset" id="reset" value="Clear Form" style="width: 100%;">
+
+
+
+        </form>
 
     </div>
 
 
 </div>
+
+<p style="color: white; text-align: center;">Maria Coronel | 9 - Ruby @2026</p>
+<br>
 
 </body>
 </html>
